@@ -22,7 +22,7 @@ export default function Contact() {
   console.log("API Key:", import.meta.env.VITE_APP_GOOGLE_MAPS_API_KEY);
 
   return (
-    <div className="font-mono bg-white">
+    <div className="font-mono">
       <div className="Hero h-[200px] flex items-center justify-center text-gray-900 bg-gradient-to-bl from-primary to-final">
         <div>
           <h1 className="text-3xl sm:text-4xl font-bold">Contactez - Nous</h1>
@@ -131,11 +131,11 @@ export default function Contact() {
             </label>
             <div className="type flex items-center justify-center gap-1 md:gap-10 md:ml-0 lg:ml-0">
               <label className="flex items-center gap-1 font-medium text-gray-800">
-                <input type="radio" name="type" id="" className="bg-gray-100" />
+                <input type="radio" name="type" id="" />
                 Professionnel
               </label>
               <label className="flex items-center gap-1 font-medium text-gray-800">
-                <input type="radio" name="type" id="" className="bg-gray-100" />
+                <input type="radio" name="type" id="" />
                 Particulier
               </label>
             </div>
@@ -234,12 +234,7 @@ export default function Contact() {
             ></textarea>
           </div>
           <div className="check py-2 text-gray-800">
-            <input
-              type="checkbox"
-              name="check"
-              id=""
-              className="bg-gray-100 "
-            />
+            <input type="checkbox" name="check" id="" />
             J’ai lu et j’accepte les mentions légales liées à l’usage de mes
             données personnelles. En soumettant ce formulaire, j’accepte d’être
             recontacté(e) dans le cadre d’une demande d’information autour des
