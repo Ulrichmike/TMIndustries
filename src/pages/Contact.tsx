@@ -22,7 +22,7 @@ export default function Contact() {
   console.log("API Key:", import.meta.env.VITE_APP_GOOGLE_MAPS_API_KEY);
 
   return (
-    <div className="font-mono">
+    <div className="font-mono bg-white">
       <div className="Hero h-[200px] flex items-center justify-center text-gray-900 bg-gradient-to-bl from-primary to-final">
         <div>
           <h1 className="text-3xl sm:text-4xl font-bold">Contactez - Nous</h1>
@@ -48,7 +48,7 @@ export default function Contact() {
               />
             </svg>
           </div>
-          <div className="adress_info">
+          <div className="adress_info font-medium text-gray-800">
             <span className="flex justify-start pl-4 text-2xl font-bold">
               {" "}
               Adress
@@ -68,7 +68,7 @@ export default function Contact() {
               />
             </svg>
           </div>
-          <div className="adress_info">
+          <div className="adress_info font-medium text-gray-800">
             <span className="flex justify-start pl-4 text-2xl font-bold">
               {" "}
               Email Adress
@@ -89,7 +89,7 @@ export default function Contact() {
               />
             </svg>
           </div>
-          <div className="adress_info">
+          <div className="adress_info font-medium text-gray-800">
             <span className="flex justify-start pl-4 text-2xl font-bold">
               {" "}
               Phone
