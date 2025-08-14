@@ -70,7 +70,7 @@ export default function Header() {
             menuOpen ? "block" : "hidden"
           } absolute top-20 left-0 w-full bg-white p-5 lg:static lg:flex lg:w-auto lg:p-0 lg:gap-10 text-base`}
         >
-          <ul className="sm:flex sm:justify-between sm:gap-10">
+          <ul className="sm:flex sm:justify-between sm:gap-10 text-gray-500">
             <li>
               <Link to="/" className="hover:text-red-300 transition">
                 Accueil
