@@ -38,9 +38,9 @@ export default function Contact() {
 
       {/* Informations */}
 
-      <div className="info items-center mx-auto py-10 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 bg-white">
+      <div className="info text-xs sm:text-sm items-center mx-auto py-10 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 bg-white">
         <div className="adress flex items-center justify-center py-5 ">
-          <div className="icon grid grid-cols-1 items-start w-10 h-10 self-start -translate-y-1">
+          <div className="icon w-10 h-10 self-start -translate-y-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
               <path
                 fill="#eed3c1"
@@ -60,7 +60,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="email_adress flex items-center justify-center py-5 ">
-          <div className="icon grid grid-cols-1 items-start w-10 h-10 self-start -translate-y-1">
+          <div className="icon w-10 h-10 self-start -translate-y-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
               <path
                 fill="#eed3c1"
@@ -73,7 +73,7 @@ export default function Contact() {
               {" "}
               Email Adress
             </span>
-            <p>
+            <p className="flex">
               kolottodebonheur1986@gmail.com
               <br />
               tmindustries18@gmail.com
@@ -81,7 +81,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="phone flex items-center justify-center py-5 ">
-          <div className="icon grid grid-cols-1 items-start w-10 h-10 self-start -translate-y-1">
+          <div className="icon w-10 h-10 self-start -translate-y-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
               <path
                 fill="#eed3c1"
@@ -120,7 +120,7 @@ export default function Contact() {
       </div>
 
       {/* Formulaire de renseignement */}
-      <div className="form border min-w-[250px] max-w-4xl mx-4 sm:mx-8 md:mx-auto px-4 py-10 md:px-10 my-10 rounded-lg bg-gray-100">
+      <div className="form border min-w-[250px] max-w-4xl mx-4 sm:mx-8 md:mx-auto px-4 py-10 md:px-10 my-10 rounded-lg bg-gray-50">
         <p className="text-xl font-semibold mb-4">
           Formulaire De Renseignement
         </p>
@@ -129,7 +129,7 @@ export default function Contact() {
             <label className="flex justify-center lg:w:1/2">
               Vous etes ? :
             </label>
-            <div className="type flex items-center justify-center gap-1 md:gap-10 md:-ml-[200px] lg:-ml-[300px]">
+            <div className="type flex items-center justify-center gap-1 md:gap-10 md:ml-0 lg:ml-0">
               <label className="flex items-center gap-1">
                 <input type="radio" name="type" id="" />
                 Professionnel
@@ -189,13 +189,15 @@ export default function Contact() {
             </div>
           </div>
           <div className="intervention flex flex-col">
-            <label className="flex">Ville D'intervention : </label>
+            <label className="flex font-medium text-gray-800">
+              Ville D'intervention :
+            </label>
             <input
               type="text"
               name=""
               id=""
               placeholder="Ville"
-              className="border h-12 pl-10 rounded"
+              className="border border-gray-300 shadow-sm h-12 pl-10 rounded-md bg-gray-100 text-gray-900 placeholder-gray-500 focus:border-secondary"
               required
             />
           </div>

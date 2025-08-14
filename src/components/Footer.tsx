@@ -139,7 +139,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Support & Vente</h3>
             <div className="">
-              <p>+237 696 61 60 34 / 679 81 51 50</p>
+              <p>(+237) 696-61-60-34 / 679-81-51-50</p>
               <p>tmindustries18@gmail.com</p>
               <p>
                 Ndogbong - Douala(Cameroun) <br /> Face Entrée hotel Deauville à
