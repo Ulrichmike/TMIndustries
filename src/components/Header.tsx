@@ -95,7 +95,7 @@ export default function Header() {
         </nav>
         <div
           onClick={handleClick}
-          className="contactUs flex gap-2 border-blue-300 py-2 px-4 rounded-md bg-gray-900 hover:cursor-pointer"
+          className="contactUs flex px-2 sm:gap-2 border-blue-300 py-2 sm:px-4 rounded-md bg-gray-900 hover:cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -38,9 +38,9 @@ export default function Contact() {
 
       {/* Informations */}
 
-      <div className="info items-center py-10 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 bg-white">
+      <div className="info items-center mx-auto py-10 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 bg-white">
         <div className="adress flex items-center justify-center py-5 ">
-          <div className="icon w-20 h-20">
+          <div className="icon grid grid-cols-1 items-start w-10 h-10 self-start -translate-y-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
               <path
                 fill="#eed3c1"
@@ -49,7 +49,10 @@ export default function Contact() {
             </svg>
           </div>
           <div className="adress_info">
-            <span className="text-2xl font-bold"> Adress</span>
+            <span className="flex justify-start pl-4 text-2xl font-bold">
+              {" "}
+              Adress
+            </span>
             <p>
               Ndogbong - Douala(Cameroun) <br />
               Face Entrée hotel Deauville <br />à 150m du Comissariat 10è
@@ -57,7 +60,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="email_adress flex items-center justify-center py-5 ">
-          <div className="icon w-20 h-20">
+          <div className="icon grid grid-cols-1 items-start w-10 h-10 self-start -translate-y-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
               <path
                 fill="#eed3c1"
@@ -66,16 +69,19 @@ export default function Contact() {
             </svg>
           </div>
           <div className="adress_info">
-            <span className="text-2xl font-bold"> Email Adress</span>
+            <span className="flex justify-start pl-4 text-2xl font-bold">
+              {" "}
+              Email Adress
+            </span>
             <p>
-              tmindustries18@gmail.com
-              <br />
               kolottodebonheur1986@gmail.com
+              <br />
+              tmindustries18@gmail.com
             </p>
           </div>
         </div>
         <div className="phone flex items-center justify-center py-5 ">
-          <div className="icon w-16 h-20">
+          <div className="icon grid grid-cols-1 items-start w-10 h-10 self-start -translate-y-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
               <path
                 fill="#eed3c1"
@@ -84,8 +90,11 @@ export default function Contact() {
             </svg>
           </div>
           <div className="adress_info">
-            <span className="text-2xl font-bold my-4"> Phone</span>
-            <p>
+            <span className="flex justify-start pl-4 text-2xl font-bold">
+              {" "}
+              Phone
+            </span>
+            <p className="max-w-48">
               Orange CM (+237): 696616034 / 691822215 <br /> MTN CM(+237):
               679815150 / 674166834
             </p>
@@ -111,7 +120,7 @@ export default function Contact() {
       </div>
 
       {/* Formulaire de renseignement */}
-      <div className="form max-w-4xl mx-auto px-4 py-10 sm:px-10 my-10 bg-gray-100">
+      <div className="form border min-w-[250px] max-w-4xl mx-4 sm:mx-8 md:mx-auto px-4 py-10 md:px-10 my-10 rounded-lg bg-gray-100">
         <p className="text-xl font-semibold mb-4">
           Formulaire De Renseignement
         </p>
@@ -120,7 +129,7 @@ export default function Contact() {
             <label className="flex justify-center lg:w:1/2">
               Vous etes ? :
             </label>
-            <div className="type flex items-center justify-center gap-10 md:-ml-[200px] lg:-ml-[300px]">
+            <div className="type flex items-center justify-center gap-1 md:gap-10 md:-ml-[200px] lg:-ml-[300px]">
               <label className="flex items-center gap-1">
                 <input type="radio" name="type" id="" />
                 Professionnel
@@ -223,7 +232,7 @@ export default function Contact() {
           </div>
           <button
             type="submit"
-            className="border w-full h-12 rounded bg-secondary text-white"
+            className="border w-full h-12 rounded bg-gradient-to-bl from-secondary to-final text-white"
           >
             Envoyer
           </button>
