@@ -121,31 +121,21 @@ export default function Contact() {
 
       {/* Formulaire de renseignement */}
       <div className="form border min-w-[250px] max-w-4xl mx-4 sm:mx-8 md:mx-auto px-4 py-10 md:px-10 my-10 rounded-lg bg-gray-50">
-        <p className="text-xl font-semibold mb-4">
+        <p className="text-xl font-semibold mb-4 text-gray-800">
           Formulaire De Renseignement
         </p>
         <form action="" className="gap-10">
           <div className="lg:grid grid-cols-2 lg:justify-start md:grid grid-cols-2 md:justify-start">
-            <label className="flex justify-center lg:w:1/2">
+            <label className="flex justify-center lg:w:1/2 text-gray-800">
               Vous etes ? :
             </label>
             <div className="type flex items-center justify-center gap-1 md:gap-10 md:ml-0 lg:ml-0">
-              <label className="flex items-center gap-1">
-                <input
-                  type="radio"
-                  name="type"
-                  id=""
-                  className="flex font-medium text-gray-800"
-                />
+              <label className="flex items-center gap-1 font-medium text-gray-800">
+                <input type="radio" name="type" id="" className="bg-gray-100" />
                 Professionnel
               </label>
-              <label className="flex items-center gap-1">
-                <input
-                  type="radio"
-                  name="type"
-                  id=""
-                  className="flex font-medium text-gray-800"
-                />
+              <label className="flex items-center gap-1 font-medium text-gray-800">
+                <input type="radio" name="type" id="" className="bg-gray-100" />
                 Particulier
               </label>
             </div>
@@ -243,12 +233,12 @@ export default function Contact() {
               required
             ></textarea>
           </div>
-          <div className="check py-2">
+          <div className="check py-2 text-gray-800">
             <input
               type="checkbox"
               name="check"
               id=""
-              className="flex font-medium text-gray-800"
+              className="bg-gray-100 "
             />
             J’ai lu et j’accepte les mentions légales liées à l’usage de mes
             données personnelles. En soumettant ce formulaire, j’accepte d’être
