@@ -43,12 +43,10 @@ export default function Home() {
     },
   ];
 
-  const handleTabClick =
-    (tab: "services" | "values") =>
-    (event: React.MouseEvent<HTMLButtonElement>): void => {
-      setActiveTab(tab);
-      // Autres opérations liées au changement d'onglet
-    };
+  const handleTabClick = (tab: "services" | "values") => (): void => {
+    setActiveTab(tab);
+    // Autres opérations liées au changement d'onglet
+  };
   //functions
 
   return (

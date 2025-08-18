@@ -1,8 +1,8 @@
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import backgroundImage from "./../assets/placeholder.png";
+
 import backgroundImage2 from "./../assets/picture2.jpg";
-import image from "./../assets/heart-partner-handshake.svg";
+// import image from "./../assets/heart-partner-handshake.svg";
 import CountUp from "react-countup";
 
 export default function ChooseUs() {
