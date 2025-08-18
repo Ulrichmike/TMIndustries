@@ -9,7 +9,7 @@ export default function Footer() {
   //render
   return (
     <>
-      <footer className="bg-gray-900 text-white px-10 py-10 font-mono">
+      <footer className="bg-gray-900 text-white px-10 py-10 font-sans">
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Colonne 1 */}
           <div className="">

@@ -11,6 +11,10 @@ export default {
         secondary: "#ff0000", //rouge
         ternaire: "#1d7ac0", //bleu
         variation: "#fbe0cf",
+        paleta1: "#f0e7d6",
+        paleta2: "#9dbdb8",
+        paleta3: "#ea2e00",
+        paleta4: "#e6512c",
       },
     },
   },

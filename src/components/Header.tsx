@@ -20,7 +20,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white flex shadow-md px-6 py-3 font-mono">
+    <header className="bg-white flex shadow-md px-6 py-3 font-sans">
       <div className="container mx-auto flex items-center justify-between">
         {/* Bouton menu mobile */}
         <button
