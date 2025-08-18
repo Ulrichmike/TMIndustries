@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
 import "yet-another-react-lightbox/styles.css";
-import backgroundImage from "./../assets/placeholder.png";
+// import backgroundImage from "./../assets/placeholder.png";
 import { useState } from "react";
 import Hero from "../components/Hero";
 import ChooseUs from "../components/ChooseUs";
 import Galleries from "../components/Galleries";
-import SaysAbout from "../components/SaysAboutUs";
+// import SaysAbout from "../components/SaysAboutUs";
 import Testimonials from "../components/SaysAboutUs";
 import Blog from "../components/Blog";
 import backgroundImage2 from "./../assets/picture2.jpg";
