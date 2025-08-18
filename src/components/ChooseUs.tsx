@@ -48,8 +48,12 @@ export default function ChooseUs() {
                     />
                   </svg>
                   <div className="">
-                    <h4>Expert Technician</h4>
-                    <span>24/7 emergency service available</span>
+                    <h4 className="text-3xs text-gray-900 font-semibold">
+                      Expert Technician
+                    </h4>
+                    <span className="text-gray-800">
+                      24/7 emergency service available
+                    </span>
                   </div>
                 </li>
                 <li className="flex items-center gap-4">
@@ -68,8 +72,12 @@ export default function ChooseUs() {
                     />
                   </svg>
                   <div>
-                    <h4>Expert Technician</h4>
-                    <span>Certified and experienced technicians</span>
+                    <h4 className="text-3xs text-gray-900 font-semibold">
+                      Expert Technician
+                    </h4>
+                    <span className="text-gray-800">
+                      Certified and experienced technicians
+                    </span>
                   </div>
                 </li>
                 <li className="flex items-center gap-4">
@@ -88,8 +96,12 @@ export default function ChooseUs() {
                     />
                   </svg>
                   <div>
-                    <h4>Expert Technician</h4>
-                    <span>Energy-efficient solutions to save you money</span>
+                    <h4 className="text-3xs text-gray-900 font-semibold">
+                      Expert Technician
+                    </h4>
+                    <span className="text-gray-800">
+                      Energy-efficient solutions to save you money
+                    </span>
                   </div>
                 </li>
               </ul>
