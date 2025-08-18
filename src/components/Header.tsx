@@ -1,11 +1,30 @@
 import { Link } from "react-router-dom";
 import TMILogo from "../assets/TMILogo.jpg";
 // import phone from "../assets/phone-flip.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   //states
   const [menuOpen, setMenuOpen] = useState(false);
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        // On descend -> cacher le header
+        setShow(false);
+      } else {
+        // On monte -> afficher le header
+        setShow(true);
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   //functions
 
@@ -20,7 +39,10 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white flex shadow-md px-6 py-3 font-sans">
+    <header
+      className={`bg-white flex shadow-md px-6 py-3 font-sans fixed top-0 left-0 w-full transition-transform duration-300 z-50
+    ${show ? "translate-y-0" : "-translate-y-full"}`}
+    >
       <div className="container mx-auto flex items-center justify-between">
         {/* Bouton menu mobile */}
         <button
@@ -72,22 +94,42 @@ export default function Header() {
         >
           <ul className="sm:flex sm:justify-between sm:gap-10 text-gray-500">
             <li>
-              <Link to="/" className="hover:text-red-300 transition">
+              <Link
+                to="/"
+                className="relative text-gray-800 font-medium tracking-wide transition-colors duration-300 hover:text-paleta4
+             after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-paleta4 
+             after:transition-all after:duration-300 hover:after:w-full"
+              >
                 Accueil
               </Link>
             </li>
             <li>
-              <Link to="/Services" className="hover:text-red-300 transition">
+              <Link
+                to="/Services"
+                className="relative text-gray-800 font-medium tracking-wide transition-colors duration-300 hover:text-paleta4
+             after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-paleta4 
+             after:transition-all after:duration-300 hover:after:w-full"
+              >
                 Nos Services
               </Link>
             </li>
             <li>
-              <Link to="/Gallery" className="hover:text-red-300 transition">
+              <Link
+                to="/Gallery"
+                className="relative text-gray-800 font-medium tracking-wide transition-colors duration-300 hover:text-paleta4
+             after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-paleta4 
+             after:transition-all after:duration-300 hover:after:w-full"
+              >
                 Realisations
               </Link>
             </li>
             <li>
-              <Link to="/Contact" className="hover:text-red-300 transition">
+              <Link
+                to="/Contact"
+                className="relative text-gray-800 font-medium tracking-wide transition-colors duration-300 hover:text-paleta4
+             after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-paleta4 
+             after:transition-all after:duration-300 hover:after:w-full"
+              >
                 Contact
               </Link>
             </li>

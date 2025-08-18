@@ -165,8 +165,8 @@ export default function Home() {
                   onClick={handleTabClick("services")}
                   className={`px-2 py-1 m-1 text-sm font-semibold uppercase tracking-wider rounded-md transition-colors ${
                     activeTab === "services"
-                      ? "text-white bg-intermediaire"
-                      : "text-paleta2 hover:bg-intermediaire"
+                      ? "text-white bg-intermediaire hover:border-none"
+                      : "text-paleta2 hover:bg-intermediaire hover:border-none"
                   }`}
                 >
                   Our Services
@@ -175,8 +175,8 @@ export default function Home() {
                   onClick={handleTabClick("values")}
                   className={`px-4 py-2 m-1 text-sm font-semibold uppercase tracking-wider rounded-md transition-colors ${
                     activeTab === "values"
-                      ? "text-white bg-intermediaire"
-                      : "text-paleta2 hover:bg-intermediaire"
+                      ? "text-white bg-intermediaire hover:border-none"
+                      : "text-paleta2 hover:bg-intermediaire hover:border-none"
                   }`}
                 >
                   Our Values

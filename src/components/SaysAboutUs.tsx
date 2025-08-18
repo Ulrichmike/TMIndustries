@@ -62,7 +62,7 @@ export default function Testimonials() {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-12 h-12 rounded-full"
+                    className="w-12 h-12 rounded-full border border-red-200"
                   />
                 </div>
                 <div className="grid items-center justify-center mb-1">

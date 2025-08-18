@@ -5,16 +5,16 @@ import backgroundImage2 from "./../assets/picture2.jpg";
 export default function Hero() {
   return (
     <div
-      className="hero relative flex items-center h-screen bg-cover bg-center bg-no-repeat"
+      className="hero relative mt-12 flex items-center h-screen bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${backgroundImage2})`,
       }}
     >
       {/* Overlay sombre pour améliorer la lisibilité */}
-      <div className="absolute inset-0 bg-black opacity-30"></div>
+      <div className="absolute inset-0 bg-black opacity-10"></div>
 
       {/* Contenu centré avec padding responsive */}
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
+      <div className="container mx-auto px-6 md:px-24 relative z-10">
         <div className="max-w-2xl text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             PROFESSIONAL{" "}
