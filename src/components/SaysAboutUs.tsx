@@ -37,7 +37,7 @@ export default function Testimonials() {
         <span className="text-intermediaire font-semibold uppercase tracking-wider">
           Testimonials
         </span>
-        <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">
+        <h2 className="text-3xl text-gray-900 md:text-4xl font-bold mt-2 mb-6">
           What Our Client Say's About Us
         </h2>
 
@@ -66,11 +66,11 @@ export default function Testimonials() {
                   />
                 </div>
                 <div className="grid items-center justify-center mb-1">
-                  <p className="font-bold">{item.name}</p>
+                  <p className="font-bold text-gray-900">{item.name}</p>
                   <p className="text-gray-500 text-sm">{item.role}</p>
                 </div>
 
-                <p className="mb-4">{item.text}</p>
+                <p className="mb-4 text-gray-800">{item.text}</p>
               </div>
             </SwiperSlide>
           ))}

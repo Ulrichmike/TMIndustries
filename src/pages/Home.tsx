@@ -77,7 +77,7 @@ export default function Home() {
               <span className="text-intermediaire font-semibold uppercase tracking-wider">
                 About Us
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">
+              <h2 className="text-3xl text-gray-900 md:text-4xl font-bold mt-2 mb-6">
                 We Provide The Best HVAC Services
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
@@ -102,7 +102,9 @@ export default function Home() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span>24/7 emergency service available</span>
+                  <span className="text-gray-900">
+                    24/7 emergency service available
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -119,7 +121,9 @@ export default function Home() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span>Certified and experienced technicians</span>
+                  <span className="text-gray-900">
+                    Certified and experienced technicians
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -135,7 +139,9 @@ export default function Home() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span>Energy-efficient solutions to save you money</span>
+                  <span className="text-gray-900">
+                    Energy-efficient solutions to save you money
+                  </span>
                 </li>
               </ul>
 
@@ -178,7 +184,7 @@ export default function Home() {
               </div>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
+            <h2 className="text-3xl text-gray-900 md:text-4xl font-bold mt-2 mb-4">
               Premium HVAC Solutions Tailored For You
             </h2>
             <p className="max-w-2xl mx-auto text-gray-600">
@@ -201,7 +207,7 @@ export default function Home() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">
+                  <h3 className="text-xl text-gray-900 font-semibold mb-3">
                     {service.title}
                   </h3>
                   <p className="text-gray-600">{service.description}</p>
