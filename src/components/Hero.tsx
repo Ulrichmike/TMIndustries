@@ -5,7 +5,7 @@ import backgroundImage2 from "./../assets/picture2.jpg";
 export default function Hero() {
   return (
     <div
-      className="hero relative mt-12 flex items-center h-screen bg-cover bg-center bg-no-repeat"
+      className="hero relative mt-20 flex items-center h-screen bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${backgroundImage2})`,
       }}
