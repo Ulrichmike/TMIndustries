@@ -22,11 +22,13 @@ export default function Contact() {
   console.log("API Key:", import.meta.env.VITE_APP_GOOGLE_MAPS_API_KEY);
 
   return (
-    <div className="font-sans">
-      <div className="Hero h-[200px] flex items-center justify-center text-gray-900 bg-gradient-to-bl from-primary to-final">
+    <div className="mt-20 bg-gray-10 font-sans">
+      <div className="Hero h-[200px] py-48 flex items-center justify-center text-gray-900 bg-gradient-to-tr from-intermediaire to-variation">
         <div>
-          <h1 className="text-3xl sm:text-4xl font-bold">Contactez - Nous</h1>
-          <h2 className="text-lg sm:text-xl mt-2">
+          <h1 className="text-3xl uppercase sm:text-4lg font-bold">
+            Contactez - Nous
+          </h1>
+          <h2 className="text-lg sm:text-xl mt-2 font-medium">
             VOUS AVEZ BESOIN D'UN RENSEIGNEMENT ?
           </h2>
           <h3 className="text-sm sm:text-base mt-1">
@@ -38,7 +40,7 @@ export default function Contact() {
 
       {/* Informations */}
 
-      <div className="info text-xs sm:text-sm items-center mx-auto py-10 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 bg-white">
+      <div className="info text-xs sm:text-sm items-center mx-auto py-24 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 bg-white">
         <div className="adress flex items-center justify-center py-5 ">
           <div className="icon w-10 h-10 self-start -translate-y-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -213,7 +215,7 @@ export default function Contact() {
               name=""
               id=""
               //   className="border h-12 px-10 rounded"
-              className="border border-gray-300 shadow-sm h-12 pl-10 rounded-md bg-gray-100 text-gray-900 placeholder-gray-500 focus:border-secondary"
+              className="border border-gray-900 shadow-sm h-12 pl-10 rounded-md bg-gray-100 text-gray-900 placeholder-gray-500 focus:border-secondary"
               required
             >
               <option value="Demande de devis">Demande de devis</option>
