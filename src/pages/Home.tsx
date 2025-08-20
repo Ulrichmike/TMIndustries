@@ -64,7 +64,7 @@ export default function Home() {
     <>
       <Hero />
 
-      <div className=" bg-gray-50">
+      <div className=" bg-gray-50 mx-auto sm:px-8 lg:px-12">
         <h1 className="p-12 text-2xl text-black font-bold uppercase">
           Une équipe{" "}
           <span className="bg-gradient-to-bl from-primary to-final bg-clip-text text-transparent">
