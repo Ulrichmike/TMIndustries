@@ -15,7 +15,7 @@ export default function ChooseUs() {
   return (
     <>
       {/* Why choose Us Section */}
-      <section className="pt-16 md:pt-24 md:px-36">
+      <section className="pt-12 px-6 md:pt-24 md:px-36">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2">
@@ -31,10 +31,10 @@ export default function ChooseUs() {
                 solutions for both residential and commercial properties.
               </p>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-2 mb-6 px-2">
                 <li className="flex items-center gap-4">
                   <svg
-                    className="w-5 h-5 text-blue-500 mt-1 mr-2 flex-shrink-0"
+                    className="w-5 h-5 text-white mt-1 mr-2 flex-shrink-0 bg-paleta2 rounded-full"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -48,7 +48,7 @@ export default function ChooseUs() {
                     />
                   </svg>
                   <div className="">
-                    <h4 className="text-3xs text-gray-900 font-semibold">
+                    <h4 className="text-3xs text-gray-900 font-semibold flex justify-start">
                       Expert Technician
                     </h4>
                     <span className="text-gray-800">
@@ -58,7 +58,7 @@ export default function ChooseUs() {
                 </li>
                 <li className="flex items-center gap-4">
                   <svg
-                    className="w-5 h-5 text-blue-500 mt-1 mr-2 flex-shrink-0"
+                    className="w-5 h-5 text-white mt-1 mr-2 flex-shrink-0 bg-paleta2 rounded-full"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -72,7 +72,7 @@ export default function ChooseUs() {
                     />
                   </svg>
                   <div>
-                    <h4 className="text-3xs text-gray-900 font-semibold">
+                    <h4 className="text-3xs text-gray-900 font-semibold flex justify-start">
                       Expert Technician
                     </h4>
                     <span className="text-gray-800">
@@ -82,7 +82,7 @@ export default function ChooseUs() {
                 </li>
                 <li className="flex items-center gap-4">
                   <svg
-                    className="w-5 h-5 text-blue-500 mt-1 mr-2 flex-shrink-0"
+                    className="w-5 h-5 text-white mt-1 mr-2 flex-shrink-0 bg-paleta2 rounded-full"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -96,7 +96,7 @@ export default function ChooseUs() {
                     />
                   </svg>
                   <div>
-                    <h4 className="text-3xs text-gray-900 font-semibold">
+                    <h4 className="text-3xs text-gray-900 font-semibold flex justify-start">
                       Expert Technician
                     </h4>
                     <span className="text-gray-800">

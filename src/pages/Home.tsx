@@ -65,14 +65,14 @@ export default function Home() {
       <Hero />
 
       <div className=" bg-gray-50">
-        <h1 className="p-12 text-2xl font-bold uppercase">
+        <h1 className="p-12 text-2xl text-black font-bold uppercase">
           Une équipe{" "}
           <span className="bg-gradient-to-bl from-primary to-final bg-clip-text text-transparent">
             compétente
           </span>{" "}
           et qualifiée ouverte à tous les secteurs
         </h1>
-        <div className="axe px-12 pb-12 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="axe px-8 sm:px-12 lg:px-24 pb-12 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="py-10 bg-intermediaire flex flex-col items-center rounded">
             <img src={factory} alt="" />
             <span className="text-white">Industries</span>
@@ -106,19 +106,21 @@ export default function Home() {
       </div>
 
       {/* About Section */}
-      <section className="py-16 md:py-24 md:px-36">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-20 md:px-24">
+        <div className="container mx-autosm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-4 sm:gap-4 items-center">
             <div className="lg:w-1/2 relative">
               <img
                 src={backgroundImage2}
                 alt="Technician working on air conditioning"
-                className="w-full md:h-[500px] rounded-sm shadow-xl"
+                className="w-full mx-4 md:h-[500px] rounded-sm shadow-xl"
               />
 
-              <div className="absolute -top-4 -left-4 bg-gradient-to-bl from-primary to-final backdrop-blur-sm px-2 py-1 rounded-lg shadow-md">
-                <div className="text-3xl font-bold text-white">25+</div>
-                <div className="text-sm font-semibold text-white">
+              <div className="absolute ml-4 -top-4 -left-4 bg-gradient-to-bl from-primary to-final backdrop-blur-sm px-1 sm:px-2 py-1 rounded-lg shadow-md">
+                <div className="text-xl sm:text-3xl font-bold text-white">
+                  25+
+                </div>
+                <div className="text-xs sm:text-sm font-semibold text-white">
                   Years of Experience
                 </div>
               </div>
@@ -145,7 +147,7 @@ export default function Home() {
                 ].map((item, i) => (
                   <li key={i} className="flex items-start">
                     <svg
-                      className="w-5 h-5 text-blue-500 mt-1 mr-2 flex-shrink-0"
+                      className="w-5 h-5 text-white mt-1 mr-2 flex-shrink-0 bg-paleta2 rounded-full"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -154,7 +156,7 @@ export default function Home() {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={2}
+                        strokeWidth={1.5}
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
