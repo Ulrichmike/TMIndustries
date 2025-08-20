@@ -40,7 +40,7 @@ export default function Header() {
 
   return (
     <header
-      className={`bg-white flex shadow-md px-6 py-3 font-sans fixed top-0 left-0 w-full transition-transform duration-300 z-50
+      className={`bg-gray-50 flex shadow-md px-6 py-3 font-sans fixed top-0 left-0 w-full transition-transform duration-300 z-50
     ${show ? "translate-y-0" : "-translate-y-full"}`}
     >
       <div className="container mx-auto flex items-center justify-between">
@@ -90,7 +90,7 @@ export default function Header() {
         <nav
           className={`${
             menuOpen ? "block" : "hidden"
-          } absolute top-20 left-0 w-full bg-white p-5 lg:static lg:flex lg:w-auto lg:p-0 lg:gap-10 text-base`}
+          } absolute top-20 left-0 w-full bg-gray-50 p-5 lg:static lg:flex lg:w-auto lg:p-0 lg:gap-10 text-base`}
         >
           <ul className="sm:flex sm:justify-between sm:gap-10 text-gray-500">
             <li>

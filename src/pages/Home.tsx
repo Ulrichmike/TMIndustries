@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
+import factory from "./../assets/factory.png";
+import home from "./../assets/home.png";
+import hospital from "./../assets/hospital.png";
+import hotel from "./../assets/hotel.png";
+import microscope from "./../assets/microscope.png";
+import marketplace from "./../assets/small-business.png";
+
 import "yet-another-react-lightbox/styles.css";
 
 import Hero from "../components/Hero";
@@ -57,15 +64,56 @@ export default function Home() {
     <>
       <Hero />
 
+      <div className=" bg-gray-50">
+        <h1 className="p-12 text-2xl font-bold uppercase">
+          Une équipe{" "}
+          <span className="bg-gradient-to-bl from-primary to-final bg-clip-text text-transparent">
+            compétente
+          </span>{" "}
+          et qualifiée ouverte à tous les secteurs
+        </h1>
+        <div className="axe px-12 pb-12 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="py-10 bg-intermediaire flex flex-col items-center rounded">
+            <img src={factory} alt="" />
+            <span className="text-white">Industries</span>
+          </div>
+
+          <div className="py-10 bg-intermediaire flex flex-col items-center rounded">
+            <img src={home} alt="" />
+            <span className="text-white">Maisons</span>
+          </div>
+
+          <div className="py-10 bg-intermediaire flex flex-col items-center rounded">
+            <img src={hospital} alt="" />
+            <span className="text-white">Sanitaire</span>
+          </div>
+
+          <div className="py-10 bg-intermediaire flex flex-col items-center rounded">
+            <img src={microscope} alt="" />
+            <span className="text-white">Laboratoires</span>
+          </div>
+
+          <div className="py-10 bg-intermediaire flex flex-col items-center rounded">
+            <img src={marketplace} alt="" />
+            <span className="text-white">Marketplace</span>
+          </div>
+
+          <div className="py-10 bg-intermediaire flex flex-col items-center rounded">
+            <img src={hotel} alt="" />
+            <span className="text-white">Hotellerie</span>
+          </div>
+        </div>
+      </div>
+
       {/* About Section */}
       <section className="py-16 md:py-24 md:px-36">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-12 sm:gap-24 items-center">
+          <div className="flex flex-col lg:flex-row gap-4 sm:gap-4 items-center">
             <div className="lg:w-1/2 relative">
               <img
                 src={backgroundImage2}
                 alt="Technician working on air conditioning"
-                className="w-full sm:h-[450px] rounded-sm shadow-xl"
+                className="w-full md:h-[500px] rounded-sm shadow-xl"
               />
 
               <div className="absolute -top-4 -left-4 bg-gradient-to-bl from-primary to-final backdrop-blur-sm px-2 py-1 rounded-lg shadow-md">
@@ -76,11 +124,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:w-1/2">
-              <span className="text-intermediaire font-semibold uppercase tracking-wider">
+            <div className="px-12 lg:w-1/2">
+              <span className="bg-gradient-to-bl from-primary to-final bg-clip-text text-transparent font-semibold uppercase tracking-wider">
                 About Us
               </span>
-              <h2 className="text-3xl text-gray-900 md:text-4xl font-bold mt-2 mb-6">
+              <h2 className="text-3xl uppercase text-gray-900 md:text-4xl font-bold mt-2 mb-6">
                 We Provide The Best HVAC Services
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
@@ -117,7 +165,7 @@ export default function Home() {
 
               <Link
                 to="/about"
-                className="inline-block bg-intermediaire hover:bg-final text-white font-semibold py-3 px-8 rounded-lg transition duration-300"
+                className="inline-block bg-intermediaire hover:bg-gradient-to-bl from-primary to-final hover:text-white text-white font-semibold py-3 px-8 rounded-sm transition duration-300"
               >
                 Learn More
               </Link>
