@@ -1,5 +1,6 @@
 // import { APIProvider } from "@vis.gl/react-google-maps";
 // import CustomMap from "../components/CustomMap";
+import HeroImage from "./../assets/hero-contact.jpeg";
 import { MapContainer } from "react-leaflet/MapContainer";
 import "leaflet/dist/leaflet.css";
 import L, { type LatLngExpression } from "leaflet";
@@ -23,15 +24,20 @@ export default function Contact() {
 
   return (
     <div className="mt-20 bg-gray-10 font-sans">
-      <div className="Hero h-[200px] py-48 flex items-center justify-center text-gray-900 bg-gradient-to-tr from-intermediaire to-variation">
+      <div
+        className="Hero h-[200px] py-48 flex items-center justify-center text-gray-900 bg-no-repeat bg-cover bg-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${HeroImage})`,
+        }}
+      >
         <div>
-          <h1 className="text-3xl uppercase sm:text-4lg font-bold">
+          <h1 className="text-3xl uppercase sm:text-4lg font-bold bg-gradient-to-tr from-intermediaire to-variation bg-clip-text text-transparent">
             Contactez - Nous
           </h1>
-          <h2 className="text-lg sm:text-xl mt-2 font-medium">
+          <h2 className="text-lg text-white sm:text-xl mt-2 font-medium">
             VOUS AVEZ BESOIN D'UN RENSEIGNEMENT ?
           </h2>
-          <h3 className="text-sm sm:text-base mt-1">
+          <h3 className="text-sm text-white sm:text-base mt-1">
             Laissez - Nous un message et nous vous repondrons dans les
             meilleures delais
           </h3>
