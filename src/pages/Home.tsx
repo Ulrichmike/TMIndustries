@@ -64,41 +64,41 @@ export default function Home() {
     <>
       <Hero />
 
-      <div className=" bg-gray-50 mx-auto sm:px-8 lg:px-12">
-        <h1 className="p-12 text-2xl text-black font-bold uppercase">
+      <div className=" bg-gray-50 mx-auto sm:px-8 lg:px-36">
+        <h1 className="py-16 text-3xl text-black font-bold uppercase">
           Une équipe{" "}
           <span className="bg-gradient-to-bl from-primary to-final bg-clip-text text-transparent">
             compétente
           </span>{" "}
           et qualifiée ouverte à tous les secteurs
         </h1>
-        <div className="axe px-8 sm:px-12 lg:px-24 pb-12 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="py-10 bg-intermediaire flex flex-col items-center rounded">
+        <div className="axe px-8 sm:px-12 lg:px-24 pb-12 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-10">
+          <div className="py-10 bg-intermediaire flex flex-col items-center rounded gap-1 hover:translate-y-2 duration-300">
             <img src={factory} alt="" />
             <span className="text-white">Industries</span>
           </div>
 
-          <div className="py-10 bg-intermediaire flex flex-col items-center rounded">
+          <div className="py-10 bg-intermediaire flex flex-col items-center rounded gap-1 hover:translate-y-2 duration-300">
             <img src={home} alt="" />
             <span className="text-white">Maisons</span>
           </div>
 
-          <div className="py-10 bg-intermediaire flex flex-col items-center rounded">
+          <div className="py-10 bg-intermediaire flex flex-col items-center rounded gap-1 hover:translate-y-2 duration-300">
             <img src={hospital} alt="" />
             <span className="text-white">Sanitaire</span>
           </div>
 
-          <div className="py-10 bg-intermediaire flex flex-col items-center rounded">
+          <div className="py-10 bg-intermediaire flex flex-col items-center rounded gap-1 hover:translate-y-2 duration-300">
             <img src={microscope} alt="" />
             <span className="text-white">Laboratoires</span>
           </div>
 
-          <div className="py-10 bg-intermediaire flex flex-col items-center rounded">
+          <div className="py-10 bg-intermediaire flex flex-col items-center rounded gap-1 hover:translate-y-2 duration-300">
             <img src={marketplace} alt="" />
             <span className="text-white">Marketplace</span>
           </div>
 
-          <div className="py-10 bg-intermediaire flex flex-col items-center rounded">
+          <div className="py-10 bg-intermediaire flex flex-col items-center rounded gap-1 hover:translate-y-2 duration-300">
             <img src={hotel} alt="" />
             <span className="text-white">Hotellerie</span>
           </div>
@@ -215,7 +215,7 @@ export default function Home() {
           </div>
 
           <div
-            className={`grid grid-cols-1 gap-8 ${
+            className={`mx-4 grid grid-cols-1 gap-4 ${
               activeTab === "services"
                 ? "md:grid-cols-2 lg:grid-cols-4"
                 : "md:grid-cols-3 lg:grid-cols-3"
@@ -225,12 +225,12 @@ export default function Home() {
               ? services.map((service, index) => (
                   <div
                     key={index}
-                    className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+                    className="bg-white p-2 sm:pb-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
                   >
                     <img
                       src={backgroundImage1}
                       alt={service.title}
-                      className="w-full h-40 object-cover rounded-md mb-4"
+                      className="w-full h-40 sm:h-50 object-cover rounded-md mb-4"
                     />
                     <h3 className="text-xl text-gray-900 font-semibold mb-2">
                       {service.title}

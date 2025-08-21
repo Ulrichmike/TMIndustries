@@ -32,7 +32,7 @@ export default function Testimonials() {
   const nextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gray-50 my-12">
       <div className="max-w-4xl mx-auto px-6 text-center relative">
         <span className="text-intermediaire font-semibold uppercase tracking-wider">
           Testimonials
@@ -57,7 +57,7 @@ export default function Testimonials() {
         >
           {testimonials.map((item, idx) => (
             <SwiperSlide key={idx}>
-              <div className="bg-gray-50 p-8 rounded-2xl relative">
+              <div className="bg-white p-8 rounded-2xl relative shadow">
                 <div className="flex items-center justify-center">
                   <img
                     src={item.image}

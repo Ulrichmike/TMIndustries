@@ -23,7 +23,7 @@ export default function Galleries() {
           <span className="text-intermediaire font-semibold uppercase tracking-wider">
             Our Work Gallery
           </span>
-          <h2 className="text-3xl text-gray-900 md:text-4xl capitalize font-bold mt-2 mb-6">
+          <h2 className="text-3xl text-gray-900 md:text-4xl font-bold mt-2 mb-6 capitalize">
             Explore our recent projects and installations
           </h2>
 
