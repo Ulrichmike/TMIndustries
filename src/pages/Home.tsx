@@ -272,7 +272,9 @@ export default function Home() {
                       alt={val.title}
                       className="h-12 w-12 mb-4"
                     />
-                    <span className="font-bold text-lg mb-2">{val.title}</span>
+                    <span className="font-bold text-lg mb-2 text-black">
+                      {val.title}
+                    </span>
                     <p className="text-gray-600 text-sm">{val.desc}</p>
                   </div>
                 ))}

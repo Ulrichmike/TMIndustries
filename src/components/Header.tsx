@@ -8,6 +8,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -106,12 +107,59 @@ export default function Header() {
             <li>
               <Link
                 to="/Services"
-                className="relative text-gray-800 font-medium tracking-wide transition-colors duration-300 hover:text-paleta4
+                className="relative group text-gray-800 font-medium tracking-wide transition-colors duration-300 hover:text-paleta4
              after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-paleta4 
              after:transition-all after:duration-300 hover:after:w-full"
+                onMouseEnter={() => setOpen(true)}
+                // onMouseLeave={() => setOpen(false)}
               >
-                Nos Services
+                Nos Services ▾
               </Link>
+              {/* Sous-menu */}
+              {open && (
+                <ul className="absolute lg:static left-0 mt-2 w-56 bg-white lg:bg-transparent lg:shadow-none text-gray-800 rounded-xl shadow-lg p-2 lg:p-0">
+                  <li>
+                    <a
+                      href="/Services/Climatisation"
+                      className="block px-4 py-2 rounded-lg hover:bg-gray-100"
+                    >
+                      Climatisation
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/Services/Froid"
+                      className="block px-4 py-2 rounded-lg hover:bg-gray-100"
+                    >
+                      Froid industriel
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/Services/Plomberie"
+                      className="block px-4 py-2 rounded-lg hover:bg-gray-100"
+                    >
+                      Plomberie
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/Services/Cuisines"
+                      className="block px-4 py-2 rounded-lg hover:bg-gray-100"
+                    >
+                      Cuisines professionnelles
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/Services/Maintenance"
+                      className="block px-4 py-2 rounded-lg hover:bg-gray-100"
+                    >
+                      Maintenance
+                    </a>
+                  </li>
+                </ul>
+              )}
             </li>
             <li>
               <Link
