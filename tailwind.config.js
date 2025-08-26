@@ -12,7 +12,7 @@ export default {
         ternaire: "#1d7ac0", //bleu
         variation: "#fbe0cf",
         paleta1: "#f0e7d6",
-        paleta2: "#9dbdb8",
+        paleta2: "#e5f7f4ff",
         paleta3: "#ea2e00",
         paleta4: "#e6512c",
       },

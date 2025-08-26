@@ -7,7 +7,7 @@ export default function Formulaire() {
         id="contact"
       >
         <p className="text-lg sm:text-xl font-semibold mb-4 text-gray-800">
-          Formulaire De Renseignement
+          Formulaire de Renseignement
         </p>
         <form
           action=""

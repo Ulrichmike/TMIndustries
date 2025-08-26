@@ -7,6 +7,15 @@ import mail from "./../../assets/mail1.png";
 import phone from "./../../assets/telephone1.png";
 import right from "./../../assets/arrows.png";
 import tick from "./../../assets/check(1).png";
+
+import { Phone, Wrench, Building, CheckCircle } from "lucide-react";
+
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { useEffect, useRef, useState } from "react";
 // import rapid from "./../../assets/rapid.png";
 // import quality from "./../../assets/quality.png";
 // import professional from "./../../assets/professional.png";
@@ -14,6 +23,8 @@ import tick from "./../../assets/check(1).png";
 
 export default function Climatisation() {
   //states
+  const [activeStep, setActiveStep] = useState<number | null>(null);
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   //variables & constantes
   //   const featuresBackgrounds = [
@@ -23,7 +34,62 @@ export default function Climatisation() {
   //     "bg-yellow-100",
   //   ];
 
+  const steps = [
+    {
+      title: "1. Diagnostic",
+      description:
+        "Un technicien analyse vos besoins et inspecte vos installations pour proposer la meilleure solution adaptée.",
+    },
+    {
+      title: "2. Devis & Planification",
+      description:
+        "Nous vous présentons un devis détaillé et définissons ensemble un calendrier d’intervention.",
+    },
+    {
+      title: "3. Installation",
+      description:
+        "Nos experts installent votre système de climatisation avec soin, dans le respect des normes en vigueur.",
+    },
+    {
+      title: "4. Tests & Mise en service",
+      description:
+        "Nous vérifions le bon fonctionnement du système et vous formons à son utilisation.",
+    },
+    {
+      title: "5. Maintenance & Suivi",
+      description:
+        "Nous assurons un suivi régulier, avec possibilité de contrats de maintenance préventive et curative.",
+    },
+  ];
+
   //functions
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = stepRefs.current.indexOf(
+              entry.target as HTMLDivElement
+            );
+            if (index !== -1) {
+              setActiveStep(index);
+            }
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    stepRefs.current.forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      stepRefs.current.forEach((el) => {
+        if (el) observer.unobserve(el);
+      });
+    };
+  }, []);
 
   return (
     <>
@@ -50,13 +116,13 @@ export default function Climatisation() {
               <div className="mt-8 flex flex-wrap justify-center gap-3">
                 <a
                   href="#contact"
-                  className="rounded bg-blue-600 px-4 sm:px-6 py-4 font-medium shadow-lg hover:bg-blue-700 text-xs sm:text-base transition"
+                  className="rounded bg-intermediaire text-white px-4 sm:px-6 py-4 font-medium shadow-lg hover:bg-final hover:text-white text-xs sm:text-base transition"
                 >
                   Demander un devis
                 </a>
                 <a
                   href="#presentation"
-                  className="rounded bg-white/10 px-4 sm:px-6 py-4 font-medium shadow-lg hover:bg-blue-700 text-xs sm:text-base transition border border-white/30"
+                  className="rounded bg-white/10 px-4 sm:px-6 py-4 font-medium shadow-lg hover:bg-white hover:text-intermediaire text-xs sm:text-base transition border border-white/30"
                 >
                   En savoir plus
                 </a>
@@ -65,31 +131,36 @@ export default function Climatisation() {
           </div>
         </section>
 
-        <div className="py-12 sm:py-12 md:py-16 lg:py-24 px-4 sm:px-8 md:px-16 lg:px-24 grid grid-cols-1 sm:grid-cols-3 sm:px-10 md:px-16 lg:px-24 gap-5 sm:gap-5 md:gap-10 lg:gap-10">
+        <div className="py-12 sm:py-12 md:py-16 lg:py-24 px-4 sm:px-8 md:px-16 lg:px-24 grid grid-cols-1 sm:grid-cols-3 sm:px-10 md:px- lg:px-36 gap-5 sm:gap-5 md:gap-10 lg:gap-10">
           <div className="col-span-2 sm:order-2">
+            <div className="w-full pb-5">
+              <img src={image1} alt="" className="w-full" />
+            </div>
             <h1 className="text-3xl sm:text-4xl font-bold uppercase text-gray-900 text-start pb-8">
-              Installation & Project Management
+              Climatisation sur mesure pour vos espaces
             </h1>
             <p className="text-base sm:text-xl text-gray-600 text-start pb-4">
-              How do consumers see your brand relative to your competitors? How
-              should a new product be positioned when it’s launched? Which
-              customer segments are most interested in our current offerings?
+              Chez <strong>TM Industries</strong>, nous concevons, installons et
+              entretenons des systèmes de climatisation adaptés aussi bien aux
+              habitations qu’aux locaux professionnels. Nos solutions
+              garantissent un confort optimal, une consommation d’énergie
+              maîtrisée et une durabilité maximale.
             </p>
             <p className="text-xs sm:text-sm text-gray-500 text-start pb-4">
-              How do consumers see your brand relative to your competitors? How
-              should a new product be positioned when it’s launched? Which
-              customer segments are most interested in our current offerings?
-              For these questions and many others, surveys remain the tried and
-              true method for gaining marketing insights
+              Que vous soyez un particulier, une entreprise ou une collectivité,
+              notre équipe met à votre disposition une expertise complète :
+              étude thermique, choix des équipements, installation certifiée et
+              maintenance régulière.
             </p>
 
             <h2 className="text-xl sm:text-2xl font-medium uppercase text-gray-800 text-start">
-              Load Calculation
+              Étude & Dimensionnement précis
             </h2>
             <p className="text-start pb-4">
-              How do consumers see your brand relative to your competitors? How
-              should a new product be positioned when it’s launched? Which
-              customer segments are most interested in our current offerings?
+              Avant toute installation, nous réalisons un diagnostic énergétique
+              et une simulation de charge thermique afin de vous proposer un
+              système adapté à vos besoins réels. Cela permet d’assurer des
+              performances optimales et d’éviter la surconsommation.
             </p>
             <ul className="pb-10">
               <li className="flex items-center justify-start gap-4 my-3 text-sm sm:text-base">
@@ -98,7 +169,7 @@ export default function Climatisation() {
                   alt="tick icon"
                   className="bg-intermediaire rounded-full w-4 h-4 sm:w-5 sm:h-5"
                 />
-                Where Ever Home is –Is where we will be able to provide Service
+                Analyse de vos besoins énergétiques
               </li>
               <li className="flex items-center justify-start gap-4 my-3 text-sm sm:text-base">
                 <img
@@ -106,7 +177,7 @@ export default function Climatisation() {
                   alt="tick icon"
                   className="bg-intermediaire rounded-full w-4 h-4 sm:w-5 sm:h-5"
                 />
-                Where Ever Home is –Is where we will be able to provide Service
+                Sélection d’équipements performants et éco-responsables
               </li>
               <li className="flex items-center justify-start gap-4 my-3 text-sm sm:text-base">
                 <img
@@ -114,7 +185,7 @@ export default function Climatisation() {
                   alt="tick icon"
                   className="bg-intermediaire rounded-full w-4 h-4 sm:w-5 sm:h-5"
                 />
-                Where Ever Home is –Is where we will be able to provide Service
+                Installation conforme aux normes en vigueur
               </li>
               <li className="flex items-center justify-start gap-4 my-3 text-sm sm:text-base">
                 <img
@@ -122,17 +193,184 @@ export default function Climatisation() {
                   alt="tick icon"
                   className="bg-intermediaire rounded-full w-4 h-4 sm:w-5 sm:h-5"
                 />
-                Where Ever Home is –Is where we will be able to provide Service
-              </li>
-              <li className="flex items-center justify-start gap-4 my-3 text-sm sm:text-base">
-                <img
-                  src={tick}
-                  alt="tick icon"
-                  className="bg-intermediaire rounded-full w-4 h-4 sm:w-5 sm:h-5"
-                />
-                Where Ever Home is –Is where we will be able to provide Service
+                Maintenance préventive et curative
               </li>
             </ul>
+            <div className="bg-gray-50 py-12">
+              <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+                Notre Processus d’Intervention
+              </h2>
+
+              <VerticalTimeline lineColor="#0ea5e9">
+                {/* Étape 1 */}
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  contentStyle={{
+                    background: activeStep === 0 ? "#0ea5e9" : "#f3f4f6",
+                    color: activeStep === 0 ? "#fff" : "#111",
+                    borderRadius: "12px",
+                    minHeight: "180px",
+                    transition: "all 0.3s ease",
+                  }}
+                  contentArrowStyle={{
+                    borderRight:
+                      activeStep === 0
+                        ? "7px solid #0ea5e9"
+                        : "7px solid #f3f4f6",
+                  }}
+                  date="Étape 1"
+                  dateClassName={`font-bold ${
+                    activeStep === 0
+                      ? "text-sky-600 text-center"
+                      : "text-gray-400"
+                  }`}
+                  iconStyle={{
+                    background: "#0ea5e9",
+                    color: "#fff",
+                    boxShadow:
+                      activeStep === 0
+                        ? "0 0 15px rgba(14,165,233,0.8)"
+                        : "none",
+                  }}
+                  icon={<Phone size={22} />}
+                >
+                  {/* 👇 On met le ref ici */}
+                  <div
+                    ref={(el) => {
+                      stepRefs.current[0] = el;
+                    }}
+                  >
+                    <h3 className="text-base font-bold tracking-wide">
+                      Prise de contact
+                    </h3>
+                    <h4 className="text-xs italic opacity-80">
+                      Téléphone ou formulaire en ligne
+                    </h4>
+                    <p className="text-xs leading-snug opacity-90">
+                      Vous nous contactez pour exprimer vos besoins en
+                      climatisation ou froid industriel.
+                    </p>
+                  </div>
+                </VerticalTimelineElement>
+
+                {/* Étape 2 */}
+                <VerticalTimelineElement
+                  date="Étape 2"
+                  dateClassName={`font-bold ${
+                    activeStep === 1
+                      ? "text-sky-600 text-center"
+                      : "text-gray-400"
+                  }`}
+                  contentStyle={{
+                    background: activeStep === 1 ? "#0ea5e9" : "#f3f4f6",
+                    color: activeStep === 1 ? "#fff" : "#111",
+                    borderRadius: "12px",
+                    transition: "all 0.3s ease",
+                  }}
+                  iconStyle={{
+                    background: "#0ea5e9",
+                    color: "#fff",
+                    boxShadow:
+                      activeStep === 1
+                        ? "0 0 15px rgba(14,165,233,0.8)"
+                        : "none",
+                  }}
+                  icon={<Building size={20} />}
+                >
+                  <div
+                    ref={(el) => {
+                      stepRefs.current[1] = el;
+                    }}
+                  >
+                    <h3 className="text-base font-bold tracking-wide">
+                      Visite sur site
+                    </h3>
+                    <h4 className="text-xs italic opacity-80">
+                      Analyse technique
+                    </h4>
+                    <p className="text-xs leading-snug opacity-90">
+                      Nos techniciens se déplacent pour étudier l’environnement
+                      et définir la solution la plus adaptée.
+                    </p>
+                  </div>
+                </VerticalTimelineElement>
+
+                {/* Étape 3 */}
+                <VerticalTimelineElement
+                  date="Étape 3"
+                  contentStyle={{
+                    background: activeStep === 2 ? "#0ea5e9" : "#f3f4f6",
+                    color: activeStep === 2 ? "#fff" : "#111",
+                    borderRadius: "12px",
+                    transition: "all 0.3s ease",
+                  }}
+                  iconStyle={{
+                    background: "#0ea5e9",
+                    color: "#fff",
+                    boxShadow:
+                      activeStep === 2
+                        ? "0 0 15px rgba(14,165,233,0.8)"
+                        : "none",
+                  }}
+                  icon={<Wrench size={20} />}
+                >
+                  <div
+                    ref={(el) => {
+                      stepRefs.current[2] = el;
+                    }}
+                  >
+                    <h3 className="text-base font-bold tracking-wide">
+                      Installation
+                    </h3>
+                    <h4 className="text-xs italic opacity-80">
+                      Mise en place & réglages
+                    </h4>
+                    <p className="text-xs leading-snug opacity-90">
+                      Nous installons vos équipements dans le respect des normes
+                      de sécurité et de performance.
+                    </p>
+                  </div>
+                </VerticalTimelineElement>
+
+                {/* Étape 4 */}
+                <VerticalTimelineElement
+                  date="Étape 4"
+                  contentStyle={{
+                    background: activeStep === 3 ? "#0ea5e9" : "#f3f4f6",
+                    color: activeStep === 3 ? "#fff" : "#111",
+                    borderRadius: "12px",
+                    transition: "all 0.3s ease",
+                  }}
+                  iconStyle={{
+                    background: "#0ea5e9",
+                    color: "#fff",
+                    boxShadow:
+                      activeStep === 3
+                        ? "0 0 15px rgba(14,165,233,0.8)"
+                        : "none",
+                  }}
+                  icon={<CheckCircle size={20} />}
+                >
+                  <div
+                    ref={(el) => {
+                      stepRefs.current[3] = el;
+                    }}
+                  >
+                    <h3 className="text-base font-bold tracking-wide">
+                      Validation & Suivi
+                    </h3>
+                    <h4 className="text-xs italic opacity-80">
+                      Contrôle qualité
+                    </h4>
+                    <p className="text-xs leading-snug opacity-90">
+                      Nous validons le bon fonctionnement et proposons un suivi
+                      de maintenance régulière.
+                    </p>
+                  </div>
+                </VerticalTimelineElement>
+              </VerticalTimeline>
+            </div>
+
             <div className="w-full pb-5">
               <img src={image1} alt="" className="w-full" />
             </div>
@@ -153,12 +391,16 @@ export default function Climatisation() {
                       a: "Entre 10 et 15 ans selon l'usage, l'environnement et la qualité de la maintenance.",
                     },
                     {
-                      q: "Proposez-vous des contrats de maintenance ?",
-                      a: "Oui, préventifs et curatifs, avec disponibilité 24/7 selon le niveau de service.",
+                      q: "Faites-vous des interventions d’urgence ?",
+                      a: "Oui, nos équipes sont disponibles 24/7 pour les pannes critiques.",
                     },
                     {
-                      q: "Quels sont vos délais d'intervention ?",
-                      a: "Sous 24 à 72h en moyenne, et urgence possible selon localisation.",
+                      q: "Vos installations sont-elles garanties ?",
+                      a: "Nous offrons une garantie pièces et main-d’œuvre pouvant aller jusqu’à 5 ans.",
+                    },
+                    {
+                      q: "Proposez-vous des solutions écologiques ?",
+                      a: "Oui, nous privilégions les systèmes à haute efficacité énergétique et fluides frigorigènes respectueux de l’environnement.",
                     },
                   ].map((item, idx) => (
                     <details
@@ -252,8 +494,14 @@ export default function Climatisation() {
         </div>
 
         {/* Formulaire + CTA final */}
-        <div className="bg-paleta1 pt-20">
-          <h2>Get In Touch</h2>
+        <div className="bg-paleta2 py-20 px-5">
+          <h2 className="text-2xl sm:text-3xl capitalize font-bold mb-6">
+            Un projet ? Parlons-en !
+          </h2>
+          <p className="mb-8 text-gray-900 font-semibold text-lg">
+            Contactez-nous pour une étude gratuite et personnalisée de vos
+            besoins en climatisation.
+          </p>
           <div>
             <Formulaire />
           </div>
