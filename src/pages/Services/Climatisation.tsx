@@ -34,33 +34,33 @@ export default function Climatisation() {
   //     "bg-yellow-100",
   //   ];
 
-  const steps = [
-    {
-      title: "1. Diagnostic",
-      description:
-        "Un technicien analyse vos besoins et inspecte vos installations pour proposer la meilleure solution adaptée.",
-    },
-    {
-      title: "2. Devis & Planification",
-      description:
-        "Nous vous présentons un devis détaillé et définissons ensemble un calendrier d’intervention.",
-    },
-    {
-      title: "3. Installation",
-      description:
-        "Nos experts installent votre système de climatisation avec soin, dans le respect des normes en vigueur.",
-    },
-    {
-      title: "4. Tests & Mise en service",
-      description:
-        "Nous vérifions le bon fonctionnement du système et vous formons à son utilisation.",
-    },
-    {
-      title: "5. Maintenance & Suivi",
-      description:
-        "Nous assurons un suivi régulier, avec possibilité de contrats de maintenance préventive et curative.",
-    },
-  ];
+  // const steps = [
+  //   {
+  //     title: "1. Diagnostic",
+  //     description:
+  //       "Un technicien analyse vos besoins et inspecte vos installations pour proposer la meilleure solution adaptée.",
+  //   },
+  //   {
+  //     title: "2. Devis & Planification",
+  //     description:
+  //       "Nous vous présentons un devis détaillé et définissons ensemble un calendrier d’intervention.",
+  //   },
+  //   {
+  //     title: "3. Installation",
+  //     description:
+  //       "Nos experts installent votre système de climatisation avec soin, dans le respect des normes en vigueur.",
+  //   },
+  //   {
+  //     title: "4. Tests & Mise en service",
+  //     description:
+  //       "Nous vérifions le bon fonctionnement du système et vous formons à son utilisation.",
+  //   },
+  //   {
+  //     title: "5. Maintenance & Suivi",
+  //     description:
+  //       "Nous assurons un suivi régulier, avec possibilité de contrats de maintenance préventive et curative.",
+  //   },
+  // ];
 
   //functions
   useEffect(() => {
