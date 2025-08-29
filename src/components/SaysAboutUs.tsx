@@ -34,11 +34,11 @@ export default function Testimonials() {
   return (
     <section className="py-16 bg-gray-50 my-12">
       <div className="max-w-4xl mx-auto px-6 text-center relative">
-        <span className="text-intermediaire font-semibold uppercase tracking-wider">
-          Testimonials
+        <span className="bg-gradient-to-bl from-primary to-final bg-clip-text text-transparent font-semibold uppercase tracking-wider">
+          Témoignages
         </span>
-        <h2 className="text-3xl text-gray-900 md:text-4xl font-bold mt-2 mb-6">
-          What Our Client Say's About Us
+        <h2 className="text-3xl text-gray-900 md:text-4xl font-bold mt-2 mb-6 uppercase">
+          Ce que nos clients disent de nous
         </h2>
 
         <Swiper
@@ -57,7 +57,7 @@ export default function Testimonials() {
         >
           {testimonials.map((item, idx) => (
             <SwiperSlide key={idx}>
-              <div className="bg-white p-8 rounded-2xl relative shadow">
+              <div className="bg-white bg-opacity-10 backdrop-blur-md p-10 rounded-3xl shadow-lg flex flex-col items-center mx-6 md:mx-12 transition-transform hover:scale-105">
                 <div className="flex items-center justify-center">
                   <img
                     src={item.image}

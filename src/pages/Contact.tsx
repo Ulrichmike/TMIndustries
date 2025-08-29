@@ -4,7 +4,7 @@ import location from "./../assets/location2.png";
 import mail from "./../assets/mail1.png";
 import phone from "./../assets/telephone1.png";
 
-import HeroImage from "./../assets/contact.jpeg";
+import HeroImage from "./../assets/images/contact.jpeg";
 import { MapContainer } from "react-leaflet/MapContainer";
 import "leaflet/dist/leaflet.css";
 import L, { type LatLngExpression } from "leaflet";
@@ -66,7 +66,7 @@ export default function Contact() {
               </span>
               <p>
                 Ndogbong - Douala(Cameroun) <br />
-                Face Entrée hotel Deauville <br />à 150m du Comissariat 10è
+                Face Entrée hotel Deauville <br />à 150m du Commissariat 10è
               </p>
             </div>
           </div>

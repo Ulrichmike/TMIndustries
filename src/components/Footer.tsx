@@ -26,9 +26,10 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm pb-5">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
+              <strong>TMIndustries SARL</strong> est spécialisée dans les
+              solutions industrielles et techniques innovantes, au service des
+              professionnels et des particuliers. Notre mission : offrir des
+              prestations fiables, rapides et adaptées à vos besoins.
             </p>
             <div className="social">
               <span>Réseaux Sociaux</span>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 // import backgroundImage from "./../assets/placeholder.png";
-import backgroundImage2 from "./../assets/picture2.jpg";
+import backgroundImage2 from "./../assets/images/picture2.jpg";
 
 export default function Hero() {
   return (
@@ -17,17 +17,19 @@ export default function Hero() {
       <div className="container mx-auto px-6 md:px-24 relative z-10">
         <div className="max-w-2xl text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            PROFESSIONAL{" "}
+            SERVICES PROFESSIONNELS EN{" "}
             <span className="bg-gradient-to-bl from-primary to-final bg-clip-text text-transparent">
-              AIR CONDITIONING
-            </span>{" "}
-            SERVICES
+              CLIMATISATION, FROID{" "}
+              <span className="bg-white bg-clip-text">&</span> PLOMBERIE
+            </span>
           </h1>
 
           <p className="text-lg md:text-xl mb-8 leading-relaxed">
-            Experience top-quality cooling solutions tailored to your needs. Our
-            expert technicians provide reliable installation, maintenance, and
-            repair services to keep your space comfortable year-round.
+            Bénéficiez de solutions fiables et performantes pour vos besoins en
+            climatisation, froid industriel, plomberie et maintenance. Notre
+            équipe d’experts assure l’installation, l’entretien et la réparation
+            de vos équipements pour garantir confort et efficacité toute
+            l’année.
           </p>
 
           <div className="flex flex-col pl-4 sm:flex-row sm- gap-4">

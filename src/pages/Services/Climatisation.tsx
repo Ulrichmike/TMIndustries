@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import Formulaire from "../../components/Formulaire";
-import image1 from "./../../assets/picture1.jpg";
+import image1 from "./../../assets/images/installclim.jpg";
 
 import location from "./../../assets/location2.png";
 import mail from "./../../assets/mail1.png";
 import phone from "./../../assets/telephone1.png";
 import right from "./../../assets/arrows.png";
 import tick from "./../../assets/check(1).png";
+
+import backgroundImage from "./../../assets/images/Hero-climatisation.jpg";
 
 import { Phone, Wrench, Building, CheckCircle } from "lucide-react";
 
@@ -97,10 +99,9 @@ export default function Climatisation() {
         {/* Hero Section – Image + Titre + CTA */}
         <section className="relative">
           <div
-            className="absolute inset-0 bg-center bg-cover"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1517232115160-ff93364542dd?q=80&w=1600&auto=format&fit=crop')",
+              backgroundImage: `url(${backgroundImage})`,
             }}
           />
           <div className="absolute inset-0 bg-black/50" />
@@ -201,12 +202,12 @@ export default function Climatisation() {
                 Notre Processus d’Intervention
               </h2>
 
-              <VerticalTimeline lineColor="#0ea5e9">
+              <VerticalTimeline lineColor="#bb9161ff">
                 {/* Étape 1 */}
                 <VerticalTimelineElement
                   className="vertical-timeline-element--work"
                   contentStyle={{
-                    background: activeStep === 0 ? "#0ea5e9" : "#f3f4f6",
+                    background: activeStep === 0 ? "#bb9161ff" : "#f3f4f6",
                     color: activeStep === 0 ? "#fff" : "#111",
                     borderRadius: "12px",
                     minHeight: "180px",
@@ -215,22 +216,19 @@ export default function Climatisation() {
                   contentArrowStyle={{
                     borderRight:
                       activeStep === 0
-                        ? "7px solid #0ea5e9"
+                        ? "7px solid #bb9161ff"
                         : "7px solid #f3f4f6",
                   }}
                   date="Étape 1"
                   dateClassName={`font-bold ${
                     activeStep === 0
-                      ? "text-sky-600 text-center"
+                      ? "text-intermediaire text-center"
                       : "text-gray-400"
                   }`}
                   iconStyle={{
-                    background: "#0ea5e9",
+                    background: "#bb9161ff",
                     color: "#fff",
-                    boxShadow:
-                      activeStep === 0
-                        ? "0 0 15px rgba(14,165,233,0.8)"
-                        : "none",
+                    boxShadow: activeStep === 0 ? "0 0 15px #bb9161ff" : "none",
                   }}
                   icon={<Phone size={22} />}
                 >
@@ -258,22 +256,19 @@ export default function Climatisation() {
                   date="Étape 2"
                   dateClassName={`font-bold ${
                     activeStep === 1
-                      ? "text-sky-600 text-center"
-                      : "text-gray-400"
+                      ? "text-intermediaire mr-36 text-center"
+                      : "text-gray-400 mr-36 text-center"
                   }`}
                   contentStyle={{
-                    background: activeStep === 1 ? "#0ea5e9" : "#f3f4f6",
+                    background: activeStep === 1 ? "#bb9161ff" : "#f3f4f6",
                     color: activeStep === 1 ? "#fff" : "#111",
                     borderRadius: "12px",
                     transition: "all 0.3s ease",
                   }}
                   iconStyle={{
-                    background: "#0ea5e9",
+                    background: "#bb9161ff",
                     color: "#fff",
-                    boxShadow:
-                      activeStep === 1
-                        ? "0 0 15px rgba(14,165,233,0.8)"
-                        : "none",
+                    boxShadow: activeStep === 1 ? "0 0 15px #bb9161ff" : "none",
                   }}
                   icon={<Building size={20} />}
                 >
@@ -298,19 +293,21 @@ export default function Climatisation() {
                 {/* Étape 3 */}
                 <VerticalTimelineElement
                   date="Étape 3"
+                  dateClassName={`font-bold ${
+                    activeStep === 2
+                      ? "text-intermediaire mr-36 text-center"
+                      : "text-gray-400 mr-36 text-center"
+                  }`}
                   contentStyle={{
-                    background: activeStep === 2 ? "#0ea5e9" : "#f3f4f6",
+                    background: activeStep === 2 ? "#bb9161ff" : "#f3f4f6",
                     color: activeStep === 2 ? "#fff" : "#111",
                     borderRadius: "12px",
                     transition: "all 0.3s ease",
                   }}
                   iconStyle={{
-                    background: "#0ea5e9",
+                    background: "#bb9161ff",
                     color: "#fff",
-                    boxShadow:
-                      activeStep === 2
-                        ? "0 0 15px rgba(14,165,233,0.8)"
-                        : "none",
+                    boxShadow: activeStep === 2 ? "0 0 15px #bb9161ff" : "none",
                   }}
                   icon={<Wrench size={20} />}
                 >
@@ -335,19 +332,21 @@ export default function Climatisation() {
                 {/* Étape 4 */}
                 <VerticalTimelineElement
                   date="Étape 4"
+                  dateClassName={`font-bold ${
+                    activeStep === 3
+                      ? "text-intermediaire mr-36 text-center"
+                      : "text-gray-400 mr-36 text-center"
+                  }`}
                   contentStyle={{
-                    background: activeStep === 3 ? "#0ea5e9" : "#f3f4f6",
+                    background: activeStep === 3 ? "#bb9161ff" : "#f3f4f6",
                     color: activeStep === 3 ? "#fff" : "#111",
                     borderRadius: "12px",
                     transition: "all 0.3s ease",
                   }}
                   iconStyle={{
-                    background: "#0ea5e9",
+                    background: "#bb9161ff",
                     color: "#fff",
-                    boxShadow:
-                      activeStep === 3
-                        ? "0 0 15px rgba(14,165,233,0.8)"
-                        : "none",
+                    boxShadow: activeStep === 3 ? "0 0 15px #bb9161ff" : "none",
                   }}
                   icon={<CheckCircle size={20} />}
                 >
@@ -375,7 +374,7 @@ export default function Climatisation() {
               <img src={image1} alt="" className="w-full" />
             </div>
             <div className="grid grid-cols-2 gap-5">
-              <img src={image1} alt="" />
+              <img src={image1} alt="h-1" />
               <img src={image1} alt="" />
             </div>
 
@@ -475,19 +474,22 @@ export default function Climatisation() {
               <h2 className="py-5 uppercase font-bold text-base lg:text-lg border-b-2 border-gray-300 border-solid">
                 Our Office Adress
               </h2>
-              <div className="flex gap-2 py-3 sm:py-5">
+              <div className="flex gap-5 py-3 sm:py-5">
                 <img src={location} alt="location" className="w-6 h-6" />
                 <p className="text-sm lg:text-base">
-                  2239 Turnpike Drive, Birmingham, Alabama, 35222. United States
+                  Ndogbong - Douala(Cameroun) Face Entrée hotel Deauville à 150m
+                  du Commissariat 10è
                 </p>
               </div>
               <div className="flex gap-5 py-3 sm:py-5">
                 <img src={phone} alt="phone number" className="w-6 h-6" />
-                <p className="text-sm lg:text-base">780-918-5736</p>
+                <p className="text-sm lg:text-base">
+                  (+237) : 696616034 / 691822215 679815150 / 674166834
+                </p>
               </div>
               <div className="flex gap-5 py-3 sm:py-5">
                 <img src={mail} alt="email adress" className="w-6 h-6" />
-                <p className="text-sm lg:text-base">info@info9000.ca</p>
+                <p className="text-sm lg:text-base">tmindustries18@gmail.com</p>
               </div>
             </div>
           </aside>

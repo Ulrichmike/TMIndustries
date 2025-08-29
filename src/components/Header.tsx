@@ -124,11 +124,11 @@ export default function Header() {
             </li>
 
             {/* Dropdown Services */}
-            <li className="relative">
+            <li className="relative flex items-center justify-center">
               <button
                 className="relative flex items-center gap-1 text-gray-800 font-medium tracking-wide transition-colors duration-300 hover:text-paleta4
       after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-paleta4 
-      after:transition-all after:duration-300 hover:after:w-full"
+      after:transition-all after:duration-300 hover:after:w-full border-none"
                 onClick={() => setOpen(!open)} // mobile toggle
                 onMouseEnter={() => setOpen(true)} // desktop hover
                 onMouseLeave={() => setOpen(false)}
@@ -139,7 +139,7 @@ export default function Header() {
               {open && (
                 <ul
                   ref={dropdownRef}
-                  className="absolute top-full left-0 mt-2 w-56 z-50 bg-white text-gray-800 rounded-xl shadow-lg p-2 lg:p-0"
+                  className="absolute top-full left-0 w-56 z-50 bg-gray-50 text-gray-800 rounded shadow-lg p-2 lg:p-0"
                   onMouseEnter={() => setOpen(true)}
                   onMouseLeave={() => setOpen(false)}
                 >
@@ -156,7 +156,7 @@ export default function Header() {
                     <li key={service.href}>
                       <Link
                         to={service.href}
-                        className="block px-4 py-2 rounded-lg hover:bg-gray-100 dropdown-item"
+                        className="block px-4 py-2 rounded-lg hover:bg-gray-100 hover:text-intermediaire dropdown-item"
                         onClick={() => setOpen(false)}
                       >
                         {service.name}

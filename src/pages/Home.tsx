@@ -16,8 +16,8 @@ import Galleries from "../components/Galleries";
 import Testimonials from "../components/SaysAboutUs";
 import Blog from "../components/Blog";
 
-import backgroundImage2 from "./../assets/picture2.jpg";
-import backgroundImage1 from "./../assets/picture1.jpg";
+import backgroundImage2 from "./../assets/images/picture2.jpg";
+import backgroundImage1 from "./../assets/images/picture1.jpg";
 import excellence from "./../assets/excellence.png";
 import innovation from "./../assets/innovation.png";
 import engagement from "./../assets/handshake.png";
@@ -35,24 +35,24 @@ export default function Home() {
 
   const services = [
     {
-      title: "AC Installation",
+      title: "Climatisation & Chauffage",
       description:
-        "Professional installation of all AC system types with energy-efficient solutions.",
+        "Installation, maintenance et réparation de systèmes de climatisation et de chauffage pour assurer votre confort en toute saison.",
     },
     {
-      title: "Maintenance Plans",
+      title: "Solutions de Froid",
       description:
-        "Regular check-ups to keep your system running at peak performance.",
+        "Conception, installation et entretien de chambres froides, vitrines et équipements frigorifiques pour vos besoins résidentiels et commerciaux.",
     },
     {
-      title: "Emergency Repairs",
+      title: "Plomberie",
       description:
-        "24/7 service to get your cooling system back up and running fast.",
+        "Services complets de plomberie : installation, dépannage et entretien pour garantir la fiabilité de vos réseaux d’eau.",
     },
     {
-      title: "System Upgrades",
+      title: "Maintenance & Réparations",
       description:
-        "Modernize your existing system for better efficiency and lower costs.",
+        "Plans de maintenance préventive et interventions d’urgence 24/7 pour prolonger la durée de vie de vos installations et réduire les pannes.",
     },
   ];
 
@@ -121,29 +121,32 @@ export default function Home() {
                   25+
                 </div>
                 <div className="text-xs sm:text-sm font-semibold text-white">
-                  Years of Experience
+                  Années d'experiences
                 </div>
               </div>
             </div>
 
             <div className="px-12 lg:w-1/2">
               <span className="bg-gradient-to-bl from-primary to-final bg-clip-text text-transparent font-semibold uppercase tracking-wider">
-                About Us
+                À propos de nous
               </span>
-              <h2 className="text-3xl uppercase text-gray-900 md:text-4xl font-bold mt-2 mb-6">
-                We Provide The Best HVAC Services
+              <h2 className="text-32xl uppercase text-gray-900 md:text-3xl font-bold mt-2 mb-6">
+                Nous Offrons les Meilleurs Services en Climatisation, Froid &
+                Plomberie
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                With years of experience in the industry, we specialize in
-                delivering top-notch heating, ventilation, and air conditioning
-                solutions for both residential and commercial properties.
+                Depuis plus de 25 ans, TMIndustries accompagne particuliers et
+                professionnels dans le confort de leurs locaux. Nous allions
+                expertise technique et innovation pour offrir des solutions
+                durables et efficaces en climatisation, froid industriel &
+                Plomberie.
               </p>
 
               <ul className="space-y-3 mb-8">
                 {[
-                  "24/7 emergency service available",
-                  "Certified and experienced technicians",
-                  "Energy-efficient solutions to save you money",
+                  "Équipe certifiée et expérimentée",
+                  "Solutions sur mesure pour chaque client",
+                  "Engagement pour la qualité et la sécurité",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start">
                     <svg
@@ -169,7 +172,7 @@ export default function Home() {
                 to="/about"
                 className="inline-block bg-intermediaire hover:bg-gradient-to-bl from-primary to-final hover:text-white text-white font-semibold py-3 px-8 rounded-sm transition duration-300"
               >
-                Learn More
+                En savoir plus
               </Link>
             </div>
           </div>
@@ -190,7 +193,7 @@ export default function Home() {
                       : "text-paleta2 hover:bg-intermediaire"
                   }`}
                 >
-                  Our Services
+                  Nos Services
                 </button>
                 <button
                   onClick={handleTabClick("values")}
@@ -200,17 +203,17 @@ export default function Home() {
                       : "text-paleta2 hover:bg-intermediaire"
                   }`}
                 >
-                  Our Values
+                  Nos Valeurs
                 </button>
               </div>
             </div>
 
             <h2 className="text-3xl text-gray-900 md:text-4xl font-bold mt-6 mb-4">
-              Premium HVAC Solutions Tailored For You
+              Des Solutions Premium en Climatisation, Froid & Plomberie
             </h2>
             <p className="max-w-2xl mx-auto text-gray-600">
-              We deliver comprehensive air conditioning services to ensure your
-              complete comfort in every season.
+              Nous proposons des services complets pour assurer votre confort et
+              la performance de vos installations, quelle que soit la saison.
             </p>
           </div>
 
@@ -240,7 +243,7 @@ export default function Home() {
                       to="/services"
                       className="inline-block mt-4 text-paleta4 font-medium hover:text-paleta2 transition-colors"
                     >
-                      Learn more →
+                      En savoir plus →
                     </Link>
                   </div>
                 ))
@@ -248,7 +251,7 @@ export default function Home() {
                   {
                     icon: innovation,
                     title: "Innovation",
-                    desc: "Toujours anticiper les besoins du marché et repousser les limites.",
+                    desc: "Anticiper les besoins du marché et proposer des solutions modernes.",
                   },
                   {
                     icon: excellence,
@@ -280,7 +283,7 @@ export default function Home() {
                 ))}
           </div>
           <div className="mt-12 flex flex-col gap-2 items-center">
-            <p className="font-medium text-md">
+            <p className="font-medium text-md text-gray-900">
               Vous ne trouvez pas ce que vous cherchez?
             </p>
             <button className="w-fit bg-intermediaire p-2 text-white">

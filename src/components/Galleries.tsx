@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Lightbox } from "yet-another-react-lightbox";
-import backgroundImage from "./../assets/picture1.jpg";
+import backgroundImage from "./../assets/images/picture1.jpg";
 
 export default function Galleries() {
   //state
@@ -9,26 +9,31 @@ export default function Galleries() {
 
   //variables
   const galleryItems = [
-    { id: 1, src: "/img/project1.jpg", title: "Projet Industriel" },
-    { id: 2, src: "/img/project2.jpg", title: "Chantier Naval" },
-    { id: 3, src: "/img/project3.jpg", title: "Installation Résidentielle" },
-    { id: 4, src: "/img/project4.jpg", title: "Système Commercial" },
-    { id: 5, src: "/img/project5.jpg", title: "Maintenance Préventive" },
-    { id: 6, src: "/img/project6.jpg", title: "Réparation Urgente" },
-    { id: 7, src: "/img/project4.jpg", title: "Système Commercial" },
-    { id: 8, src: "/img/project5.jpg", title: "Maintenance Préventive" },
-    { id: 9, src: "/img/project6.jpg", title: "Réparation Urgente" },
+    { id: 1, src: backgroundImage, title: "Projet Industriel" },
+    { id: 2, src: backgroundImage, title: "Chantier Naval" },
+    { id: 3, src: backgroundImage, title: "Installation Résidentielle" },
+    { id: 4, src: backgroundImage, title: "Système Commercial" },
+    { id: 5, src: backgroundImage, title: "Maintenance Préventive" },
+    { id: 6, src: backgroundImage, title: "Réparation Urgente" },
+    { id: 7, src: backgroundImage, title: "Système Commercial" },
+    { id: 8, src: backgroundImage, title: "Maintenance Préventive" },
+    { id: 9, src: backgroundImage, title: "Réparation Urgente" },
   ];
   return (
     <>
       <section className="px-4 md:px-24 bg-white">
         <div className="container mx-auto">
-          <span className="text-intermediaire font-semibold uppercase tracking-wider">
-            Our Work Gallery
+          <span className="bg-gradient-to-bl from-primary to-final bg-clip-text text-transparent font-semibold uppercase tracking-wider">
+            Notre Galerie
           </span>
-          <h2 className="text-3xl text-gray-900 md:text-4xl font-bold mt-2 mb-6 capitalize">
-            Explore our recent projects and installations
+          <h2 className="text-3xl text-gray-900 md:text-4xl font-bold mt-2 mb-6 uppercase">
+            Découvrez nos projets récents et installations
           </h2>
+          <p className="text-gray-600 mb-8 mx-4 md:mx-12 lg:mx-24">
+            TMIndustries met en œuvre son expertise dans la climatisation, le
+            froid, la plomberie et la maintenance pour offrir des solutions sur
+            mesure à nos clients, professionnels et particuliers.
+          </p>
 
           <div className="grid grid-cols-2 grid-rows-4 auto-rows-[200px] sm:grid-cols-2 lg:grid-cols-3 gap-2">
             {galleryItems.map((item, index) => (
