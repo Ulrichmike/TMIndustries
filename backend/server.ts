@@ -121,7 +121,7 @@ app.post("/api/emails", async (req: any, res: any) => {
 });
 
 // Route de santé
-app.get("/api/health", (req: any, res: any) => {
+app.get("/api/health", (res: any) => {
   res.json({ status: "OK", message: "Serveur en fonctionnement" });
 });
 
