@@ -65,7 +65,7 @@ export default function Blog() {
         <span className="text-intermediaire font-semibold uppercase tracking-wider">
           BLOG / ACTUALITÉS
         </span>
-        <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6 uppercase">
+        <h2 className="text-3xl text-gray-900 md:text-4xl font-bold mt-2 mb-6 uppercase">
           Nos Dernières Actualités
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">

@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black opacity-10"></div>
 
       {/* Contenu centré avec padding responsive */}
-      <div className="container mx-auto px-6 md:px-24 relative z-10">
+      <div className="container mx-auto px-3 md:px-24 relative z-10">
         <div className="max-w-2xl text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             SERVICES PROFESSIONNELS EN{" "}
